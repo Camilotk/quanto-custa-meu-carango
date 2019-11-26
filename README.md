@@ -1,4 +1,6 @@
 # Quanto custa o meu carro?
+![AUR Language](https://img.shields.io/badge/Made%20with-Java-critical?logo=Java&style=flat-square)
+![AUR Ask](https://img.shields.io/badge/Ask%20Me-Anything-orange?style=flat-square)
 
 Este projeto foi desenvolvido na Disciplina de Des. de Software no IFRS.
 
