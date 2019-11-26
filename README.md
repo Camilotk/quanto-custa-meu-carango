@@ -47,21 +47,21 @@ da rota /usuario com POST que não exige autenticação.
 ### Carro
 ```Json
 {
-    "placa": "JCB0777",
-    "ano": 2019,
-    "marca": {
-        "fabricante": "Fiat",
-        "modelo": "Uno"
-    },
-    "valor": 35000.78,
-    "ativo": true
+   "placa": "JCB0777",
+   "ano": 2019,
+   "marca": {
+       "fabricante": "Fiat",
+       "modelo": "Uno"
+   },
+   "valor": 35000.78,
+   "ativo": true
 }
 ```
 
 ### Categoria
 ```Json
 {
-   "nome": "Carona"
+  "nome": "Carona"
 }
 ```
 
