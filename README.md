@@ -47,13 +47,13 @@ da rota /usuario com POST que não exige autenticação.
 ### Carro
 ```Json
 {
-   "placa": "JCB0777",
+   "placa": "MDN0777",
    "ano": 2019,
    "marca": {
-       "fabricante": "Fiat",
-       "modelo": "Uno"
+       "fabricante": "Industrias Wayne",
+       "modelo": "Batmóvel"
    },
-   "valor": 35000.78,
+   "valor": 350000.75,
    "ativo": true
 }
 ```
@@ -61,18 +61,18 @@ da rota /usuario com POST que não exige autenticação.
 ### Categoria
 ```Json
 {
-  "nome": "Carona"
+  "nome": "Danos"
 }
 ```
 
 ### Lancamento
 ```Json
 {
-  "descricao": "compra de rodas novas",
+  "descricao": "Compra de rodas novas",
   "dataVencimento": "2019-11-03",
   "dataPagamento": "2019-11-03",
   "valor": 100.00,
-  "observacao": "pago na hora em crédito",
+  "observacao": "Pago na hora em crédito",
   "tipo": "DESPESA",
   "categoria": {
            "id": 2
