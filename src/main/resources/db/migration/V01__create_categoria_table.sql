@@ -1,0 +1,4 @@
+CREATE TABLE categoria (
+	id IDENTITY PRIMARY KEY,
+	nome VARCHAR(50) NOT NULL
+);
