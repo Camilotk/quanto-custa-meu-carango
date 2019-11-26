@@ -36,7 +36,7 @@ da rota /usuario com POST que não exige autenticação.
 | /carros/{id}      | http://localhost:8080/carros/{id}                            | DELETE | 204 No Content  | Nada                                                                            |
 | /lancamentos      | http://localhost:8080/lancamentos                            | POST   | 201 Created     | O lancamento criado com null nas propriedades de carro e categoria              |
 | /lancamentos      | http://localhost:8080/lancamentos                            | GET    | 200 Ok          | Todos os lançamentos paginados                                                  |
-| /lancamentos      | http://localhost:8080/lancamentos?{property}={search_string} | GET    | 200 Ok          | Apenas os resultados que a propriedade passada corresponda à pesquisa paginados |
+| /lancamentos      | http://localhost:8080/lancamentos?{property}={searchi\_string} | GET    | 200 Ok          | Apenas os resultados que a propriedade passada corresponda à pesquisa paginados |
 | /lancamentos/{id} | http://localhost:8080/lancamentos/{id}                       | GET    | 200 Ok          | O lançamento chamado                                                            |
 | /lancamentos/{id} | http://localhost:8080/lancamentos/{id}                       | PUT    | 200 Ok          | O recurso atualizado                                                            |
 | /lancamentos/{id} | http://localhost:8080/lancamentos/{id}                       | DELETE | 204 No Content  | Nada                                                                            |
@@ -47,22 +47,22 @@ da rota /usuario com POST que não exige autenticação.
 ### Carro
 ```Json
 {
-        "placa": "JCB0777",
-        "ano": 2019,
-        "marca": {
-             "fabricante": "Fiat",
-             "modelo": "Uno"
-        },
-        "valor": 35000.78,
-        "ativo": true
+    "placa": "JCB0777",
+    "ano": 2019,
+    "marca": {
+        "fabricante": "Fiat",
+        "modelo": "Uno"
+    },
+    "valor": 35000.78,
+    "ativo": true
 }
 ```
 
 ### Categoria
 ```Json
-    {
-       "nome": "Carona"
-    }
+{
+   "nome": "Carona"
+}
 ```
 
 ### Lancamento
@@ -84,8 +84,8 @@ da rota /usuario com POST que não exige autenticação.
 ```
 ### Usuário 
 ```Json
-    {
-       "login": "Batman",
-       "senha": "BruceWayne"
-    }
+{
+  "login": "Batman",
+  "senha": "BruceWayne"
+}
 ```
