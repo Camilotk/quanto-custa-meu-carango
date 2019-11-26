@@ -2,6 +2,20 @@
 
 Este projeto foi desenvolvido na Disciplina de Des. de Software no IFRS.
 
+## Autenticação
+
+O projeto utiliza o [Auth Basic do Spring Security](https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#servlet-hello-jc) para garantir a segurança das rotas
+isso significa que para que qualquer requisição seja atendida ela deve conter um
+header HTTP chamado 'Authorization' cujo o valor é a palavra 'Basic' seguida de um espaço
+e o login e senha criptografados pelo algoritmo BCrypt.
+
+Caso isso não seja feito irá retornar o código **401 Unauthorized**. Obviamente esses dados
+devem trafegar em SSL para que sejam seguros, porém devido ao custo em tempo de implementar
+OAuth2 foi decidido pelo Basic como forma de atender a demanda a tempo.
+
+O login padrão é **ADMIN** e a senha **123**, novos usuários podem se registrar através
+da rota /usuario com POST que não exige autenticação.
+
 ## Documentação das Rotas
 | Recurso           | URI                                                          | Método | Código Esperado | Retorno Esperado                                                                |
 |-------------------|--------------------------------------------------------------|--------|-----------------|---------------------------------------------------------------------------------|
