@@ -2,7 +2,10 @@
 ![AUR Language](https://img.shields.io/badge/Made%20with-Java-critical?logo=Java&style=flat-square)
 ![AUR Ask](https://img.shields.io/badge/Ask%20Me-Anything-orange?style=flat-square)
 
-Este projeto foi desenvolvido na Disciplina de Des. de Software no IFRS.
+Este projeto foi desenvolvido na Disciplina de Des. de Software no IFRS. Seu objetivo foi desenvolver uma API RESTful para o
+Controle de Gastos de um veículo próprio utilizando Spring Boot. Para que isso fosse atingido buscou-se ao mínimo atingir
+um nível de maturidade 2 à mesma, utilizando Métodos, Convenções, Códigos Http, Headers e Retornos de acordo com o que o padrão REST
+propõe.
 
 ## Autenticação
 
@@ -39,3 +42,50 @@ da rota /usuario com POST que não exige autenticação.
 | /lancamentos/{id} | http://localhost:8080/lancamentos/{id}                       | DELETE | 204 No Content  | Nada                                                                            |
 | /usuario          | http://localhost:8080/usuario                                | POST   | 201 Created     | Registra um novo usuário                                                        |
 
+## Exemplos de Formato JSON
+
+### Carro
+```Json
+{
+        "placa": "JCB0777",
+        "ano": 2019,
+        "marca": {
+             "fabricante": "Fiat",
+             "modelo": "Uno"
+        },
+        "valor": 35000.78,
+        "ativo": true
+}
+```
+
+### Categoria
+```Json
+    {
+       "nome": "Carona"
+    }
+```
+
+### Lancamento
+```Json
+{
+  "descricao": "compra de rodas novas",
+  "dataVencimento": "2019-11-03",
+  "dataPagamento": "2019-11-03",
+  "valor": 100.00,
+  "observacao": "pago na hora em crédito",
+  "tipo": "DESPESA",
+  "categoria": {
+           "id": 2
+   },
+  "carro": {
+           "id": 2
+   }
+}
+```
+### Usuário 
+```Json
+    {
+       "login": "Batman",
+       "senha": "BruceWayne"
+    }
+```
