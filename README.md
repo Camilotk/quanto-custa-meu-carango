@@ -7,6 +7,14 @@ Controle de Gastos de um veículo próprio utilizando Spring Boot. Para que isso
 um nível de maturidade 2 à mesma, utilizando Métodos, Convenções, Códigos Http, Headers e Retornos de acordo com o que o padrão REST
 propõe.
 
+## Como rodar o projeto
+
+Dentro do terminal bash rode
+```
+./mvnw spring-boot:run
+```
+ou use mvnw.cmd no Windows.
+
 ## Autenticação
 
 O projeto utiliza o [Auth Basic do Spring Security](https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#servlet-hello-jc) para garantir a segurança das rotas
