@@ -10,7 +10,7 @@ propõe.
 ## Índice
 1. [Como rodar o projeto](https://github.com/Camilotk/quanto-custa-meu-carango#como-rodar-o-projeto)
 2. [Autenticação](http://github.com/Camilotk/quanto-custa-meu-carango#autentica%C3%A7%C3%A3o)
-3. [Padronização de Métodos / Resources ao invés de Controllers](https://github.com/CamiloAutentica%C3%A7%C3%A3otk/quanto-custa-meu-carango#autentica%C3%A7%C3%A3o)
+3. [Padronização de Métodos / Resources ao invés de Controllers](https://github.com/Camilotk/quanto-custa-meu-carango#padroniza%C3%A7%C3%A3o-de-m%C3%A9todos--resources-ao-inv%C3%A9s-de-controllers)
 4. [Documentação das Rotas](https://github.com/Camilotk/quanto-custa-meu-carango#documenta%C3%A7%C3%A3o-das-rotas)
 5. [Exemplos de Formato JSON](https://github.com/Camilotk/quanto-custa-meu-carango#exemplos-de-formato-json)
 
