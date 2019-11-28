@@ -29,6 +29,24 @@ OAuth2 foi decidido pelo Basic como forma de atender a demanda a tempo.
 O login padrão é **ADMIN** e a senha **123**, novos usuários podem se registrar através
 da rota /usuario com POST que não exige autenticação.
 
+## Padronização de Métodos / Resources ao invés de Controllers
+
+Quando estamos falando em APIs RESTful utilizamos o conceito de Recursos ao invés de Controladores,
+Resource é um nome diferente para definir o Controller que 5 métodos (listar, visualizar, cadastrar, editar e excluir)
+que normalmente são necessárias para fazer o manejo de informações dentro de um Sistema, essa prática foi adotada nesse projeto.
+
+Como o Java \-ou o Spring Boot\- não possui um padrão de nomeação de métodos do Recurso, foi utilizado o
+padrão definido no Framework Laravel, que funciona muito bem para manter a consistência da nomeação dos
+métodos. O padrão seguido foi:
+
+| Verbo  | Caminho       | Método  | Ação         |
+|--------|---------------|---------|--------------|
+| GET    | /recurso      | index   | Listar todos |
+| GET    | /recurso/{id} | show    | Listar um    |
+| POST   | /recurso      | store   | Salvar       |
+| PUT    | /recurso/{id} | update  | Atualiza     |
+| DELETE | /recurso/{id} | destroy | Deleta       |
+
 ## Documentação das Rotas
 | Recurso           | URI                                                          | Método | Código Esperado | Retorno Esperado                                                                |
 |-------------------|--------------------------------------------------------------|--------|-----------------|---------------------------------------------------------------------------------|
