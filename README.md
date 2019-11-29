@@ -9,10 +9,11 @@ propõe.
 
 ## Índice
 1. [Como rodar o projeto](https://github.com/Camilotk/quanto-custa-meu-carango#como-rodar-o-projeto)
-2. [Autenticação](http://github.com/Camilotk/quanto-custa-meu-carango#autentica%C3%A7%C3%A3o)
-3. [Padronização de Métodos / Resources ao invés de Controllers](https://github.com/Camilotk/quanto-custa-meu-carango#padroniza%C3%A7%C3%A3o-de-m%C3%A9todos--resources-ao-inv%C3%A9s-de-controllers)
-4. [Documentação das Rotas](https://github.com/Camilotk/quanto-custa-meu-carango#documenta%C3%A7%C3%A3o-das-rotas)
-5. [Exemplos de Formato JSON](https://github.com/Camilotk/quanto-custa-meu-carango#exemplos-de-formato-json)
+2. [Banco de Dados e Migrations](https://github.com/Camilotk/quanto-custa-meu-carango#banco-de-dados-e-migrations)
+3. [Autenticação](http://github.com/Camilotk/quanto-custa-meu-carango#autentica%C3%A7%C3%A3o)
+4. [Padronização de Métodos / Resources ao invés de Controllers](https://github.com/Camilotk/quanto-custa-meu-carango#padroniza%C3%A7%C3%A3o-de-m%C3%A9todos--resources-ao-inv%C3%A9s-de-controllers)
+5. [Documentação das Rotas](https://github.com/Camilotk/quanto-custa-meu-carango#documenta%C3%A7%C3%A3o-das-rotas)
+6. [Exemplos de Formato JSON](https://github.com/Camilotk/quanto-custa-meu-carango#exemplos-de-formato-json)
 
 ## Como rodar o projeto
 
@@ -37,7 +38,8 @@ migrations, uma vez em que a própria [documentação do Hibernate](https://docs
 Todas as migrations são automaticamente executadas quando o sistema é iniciado.
 
 Para gerenciar as migrações basta ir em */src/main/resources/db/migrations* e checar como as tabelas, relações e inserts foram implementados.
-Foi utilizada a convenção de nomeação do Flyway de iniciar com VXX\_\_ seguida do nome que segue o padrão do laravel (create/update/delete/insert)\_\<nome\_da\_tabela\>\_(table/property)
+Foi utilizada a convenção de nomeação do Flyway de iniciar com VXX\_\_ seguida do nome que segue o padrão do laravel (create/update/delete/insert)\_\<nome\_da\_tabela\>\_(table/property).
+Ex: V01\_\_create\_carro\_table.sql para criar a tabela 'carro' ou V02\_\_update\_caro\_table.sql para alterações.
 
 ## Autenticação
 
