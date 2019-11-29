@@ -18,9 +18,26 @@ propõe.
 
 Dentro do terminal bash rode
 ```
-./mvnw spring-boot:run
+./mvnw spring-boot:repackage && ./mvnw spring-boot:run
 ```
 ou use mvnw.cmd no Windows.
+
+## Banco de Dados e Migrations
+
+Para esse projeto foi utilizado o Banco de Dados H2, esta decisão foi tomada a partir de algumas vantagens que o mesmo possui para
+o Spring Boot. A primeira é de que ele pode ser rodado in memory podendo ser integrado ao projeto, ou seja, assim que o projeto é iniciado
+o Banco de Dados é inicializado junto, sem a necessidade de instalação ou configuração, a segunda, é a de que ele pode trabalhar tanto
+*in memory* quanto de forma persistente através de arquivo, o que também permite que seja embutido junto ao executável do servidor e/ou aplicativo.
+
+Para gerenciar o banco de dados basta acessar o recurso **/h2-console** (*localhost:8080/h2-console*) e entrar com as credenciais
+**user** *root* e **password** *root*.
+
+Para trabalhar com a criação de tabelas utilizou-se a [Biblioteca Flyway](https://flywaydb.org/) que gerencia a criação das tabelas e *seeding* dos dados em
+migrations, uma vez em que a própria [documentação do Hibernate](https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#schema-generation) recomenda que utilize-se um sistema de migrações ao invés de usar o sistema de auto geração de tabelas.
+Todas as migrations são automaticamente executadas quando o sistema é iniciado.
+
+Para gerenciar as migrações basta ir em */src/main/resources/db/migrations* e checar como as tabelas, relações e inserts foram implementados.
+Foi utilizada a convenção de nomeação do Flyway de iniciar com VXX\_\_ seguida do nome que segue o padrão do laravel (create/update/delete/insert)\_\<nome\_da\_tabela\>\_(table/property)
 
 ## Autenticação
 
