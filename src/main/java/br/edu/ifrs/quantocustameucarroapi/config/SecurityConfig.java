@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-				.antMatchers("/").permitAll()
+				.antMatchers("/**").permitAll()
 				.antMatchers("/usuarios").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
 				.anyRequest().authenticated()
@@ -41,6 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.httpBasic().and()
 			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 			.csrf().disable();
+		
         http.headers().frameOptions().disable();
 
 	}
