@@ -37,7 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/usuarios").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
 				.anyRequest().authenticated()
-				.and()
+				.and().cors().and()
 			.httpBasic().and()
 			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 			.csrf().disable();
