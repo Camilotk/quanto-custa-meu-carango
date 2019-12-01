@@ -12,6 +12,7 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,6 +27,7 @@ import br.edu.ifrs.quantocustameucarroapi.event.RecursoCriadoEvent;
 import br.edu.ifrs.quantocustameucarroapi.model.Categoria;
 import br.edu.ifrs.quantocustameucarroapi.repository.CategoriaRepository;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/categorias")
 public class CategoriaResource {
