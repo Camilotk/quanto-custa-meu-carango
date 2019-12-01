@@ -27,7 +27,6 @@ import br.edu.ifrs.quantocustameucarroapi.event.RecursoCriadoEvent;
 import br.edu.ifrs.quantocustameucarroapi.model.Categoria;
 import br.edu.ifrs.quantocustameucarroapi.repository.CategoriaRepository;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/categorias")
 public class CategoriaResource {
